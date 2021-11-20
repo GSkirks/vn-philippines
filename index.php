@@ -481,7 +481,7 @@ hr{
 <section id="banner">
     <img src="images/vnxlogo.png" class="logo">
     <div class="banner-text">
-        <h1>Virtuals<br>Nutritionist PH</h1>
+        <h1>Virtual<br>Nutritionist PH</h1>
         <p>Your Personal Healthcare Companion</p>
         <div class="banner-btn">
             <a href="bmi.php"><span></span>Get Your BMI</a>
