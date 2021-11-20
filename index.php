@@ -500,7 +500,9 @@ hr{
         <li><a href="#service">SERVICES</a></li>
         <li><a href="#testimonial">TESTIMONIALS</a></li>
         <li><a href="#footer">CONNECT WITH US</a></li>
-        <li><a href="admin/adminlogin.php">ADMINISTRATOR</a></li>
+        <a href="admin/adminlogin.php">
+	<div id = "containerx">
+      <button id="btnOne" value="Go back!" onclick="history.back()">Back to Dashboard</button></a>
     </ul>
     </nav>
 </div>
