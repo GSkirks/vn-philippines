@@ -481,7 +481,7 @@ hr{
 <section id="banner">
     <img src="images/vnxlogo.png" class="logo">
     <div class="banner-text">
-        <h1>Virtual<br>Nutritionist PH</h1>
+        <h1>Virtuals<br>Nutritionist PH</h1>
         <p>Your Personal Healthcare Companion</p>
         <div class="banner-btn">
             <a href="bmi.php"><span></span>Get Your BMI</a>
@@ -500,9 +500,7 @@ hr{
         <li><a href="#service">SERVICES</a></li>
         <li><a href="#testimonial">TESTIMONIALS</a></li>
         <li><a href="#footer">CONNECT WITH US</a></li>
-        <a href="admin/adminlogin.php">
-	<div id = "containerx">
-      <button id="btnOne" value="Go back!" onclick="history.back()">Back to Dashboard</button></a>
+        <li><a href="admin/adminlogin.php">ADMINISTRATOR</a></li>
     </ul>
     </nav>
 </div>

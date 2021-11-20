@@ -1,9 +1,9 @@
 <?php
 
-$dbServername = "sql203.epizy.com";
-$dbUsername = "epiz_30409200";
-$dbPassword = "rT3wkcDJjB";
-$dbName = "epiz_30409200_useraccounts";
+$dbServername = "remotemysql.com";
+$dbUsername = "SpqfQoCNvE";
+$dbPassword = "n5Sm4722In";
+$dbName = "SpqfQoCNvE";
 
 
 
