@@ -1,274 +1,11 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BMI Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel = "stylesheet">
-  </head>
-  <body>
-
-<div class = "container">
-    <div class = "main-wrapper">
-    <div class = "bmi-heads">
-        <div id = "bmi-usc-head" class = "bmi-head active-head">
-        <h2>Standard</h2>
-        </div>
-        <div id = "bmi-si-head" class = "bmi-head">
-        <h2>Metric</h2>
-        </div>
-    </div>
-
-    <div class="bmi-contents">
-        <!-- bmi standard units -->
-        <div class = "bmi-content" id = "bmi-usc">
-        <form>
-            <div class = "form-group">
-            <p>Age</p>
-            <input type = "text" class = "form-control" placeholder="2 - 120" id = "age1">
-            </div>
-
-            <div class = "form-group col-3">
-            <p>Gender</p>
-            <div>
-                <input type = "radio" name = "gender" id = "male" value = "male" checked>
-                <label for = "male">Male</label>
-            </div>
-            <div>
-                <input type="radio" name = "gender" id = "female" value = "female">
-                <label for = "female">Female</label>
-            </div>
-            </div>
-
-            <div class = "form-group col-3">
-            <p>Height</p>
-            <input type = "text" class = "form-control" id = "feet" placeholder="feet">
-            <input type = "text" class = "form-control" id = "inches" placeholder="inches">
-            </div>
-
-            <div class = "form-group">
-            <p>Weight</p>
-            <input type = "text" class = "form-control" id = "pounds" placeholder="pounds">
-            </div>
-        </form>
-        </div>
-
-        <!-- bmi metric units -->
-        <div class = "bmi-content" id = "bmi-si">
-        <form>
-            <div class = "form-group">
-            <p>Age</p>
-            <input type = "text" class = "form-control" placeholder="2 - 120" id = "age2">
-            </div>
-
-            <div class = "form-group col-3">
-            <p>Gender</p>
-            <div>
-                <input type = "radio" name = "gender" id = "male" value = "male" checked>
-                <label for = "male">Male</label>
-            </div>
-
-            <div>
-                <input type = "radio" name = "gender" id = "female" value = "female">
-                <label for = "female">Female</label>
-            </div>
-            </div>
-
-            <div class = "form-group">
-            <p>Height</p>
-            <input type = "text" class = "form-control" id = "cm" placeholder="cm">
-            </div>
-
-            <div class = "form-group">
-            <p>Weight</p>
-            <input type = "text" class = "form-control" id = "kg" placeholder="kg">
-            </div>
-        </form>
-        </div>
-    </div>
-
-    <div class = "btns">
-        <button type = "button" id = "calc-btn" class = "btn">Calculate</button>
-        <button type = "button" id = "clr-btn" class = "btn">Clear</button>
-    </div>
-
-    <div id = "containerx">
-    <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
-    </div>
-
-    <div class = "output">
-        <span class = "alert-error">Some input are invalid!</span>
-        <div class = "bmi-output">
-        <h3 id = "bmi-value"></h3>
-        <p id = "bmi-category"></p>
-        <p id = "bmi-gender"></p>
-        </div>
-    </div>
-    </div>
-</div>
-    
-    
-
-
-    <script>
-        
-const BMI_HEADS = document.querySelectorAll('.bmi-head');
-const BMI_USC = document.getElementById('bmi-usc');
-const BMI_SI = document.getElementById('bmi-si');
-const CALC_BTN = document.getElementById('calc-btn');
-const CLR_BTN = document.getElementById('clr-btn');
-let activeForm;
-
-// event listeners
-window.addEventListener('DOMContentLoaded', () => {
-    BMI_USC.classList.add('show-bmi');
-    activeForm = "bmi-usc";
-});
-
-CALC_BTN.addEventListener('click', performBMICalc);
-CLR_BTN.addEventListener('click', () => {
-    let forms = [...document.forms];
-    forms.forEach(form => form.reset());
-    clearBMIInfo();
-});
-
-// clear BMI Info
-function clearBMIInfo(){
-    document.getElementById('bmi-value').innerHTML = "";
-    document.getElementById('bmi-category').innerHTML = "";
-    document.getElementById('bmi-gender').innerHTML = "";
-}
-
-// bmi calculation form toggle
-BMI_HEADS.forEach(bmiHead => {
-    bmiHead.addEventListener('click', () => {
-        if(bmiHead.id === "bmi-usc-head"){
-            removeActiveClass();
-            clearBMIInfo();
-            bmiHead.classList.add('active-head');
-            BMI_SI.classList.remove('show-bmi');
-            BMI_USC.classList.add('show-bmi');
-            activeForm = "bmi-usc";
-        }
-        if(bmiHead.id === "bmi-si-head"){
-            removeActiveClass();
-            clearBMIInfo();
-            bmiHead.classList.add('active-head');
-            BMI_USC.classList.remove('show-bmi');
-            BMI_SI.classList.add('show-bmi');
-            activeForm = "bmi-si";
-        }
-    });
-});
-
-// remove active class from heads
-function removeActiveClass(){
-    BMI_HEADS.forEach(bmiHead => {
-        bmiHead.classList.remove('active-head');
-    });
-}
-
-// main bmi calculation function
-function performBMICalc(){
-    let BMIInfo = getUserInput();
-    if(BMIInfo) printBMIResult(BMIInfo);
-}
-
-// get input values
-function getUserInput(){
-    let status;
-    // get input values from us units
-    if(activeForm === "bmi-usc"){
-        let age = document.getElementById('age1').value,
-        gender = document.querySelector('#bmi-usc input[name = "gender"]:checked').value,
-        heightFeet = document.getElementById('feet').value,
-        heightInches = document.getElementById('inches').value,
-        weightPounds = document.getElementById('pounds').value;
-        
-        status = checkInputStatus([age, heightFeet, heightInches, weightPounds]);
-
-        if(status == true){
-            return calculateBMI({
-                gender,
-                age, 
-                height: parseFloat(heightFeet) * 12 + parseFloat(heightInches),
-                weight: parseFloat(weightPounds)
-            });
-        }
-    }
-
-    // get input values form metric units
-    if(activeForm === "bmi-si"){
-        let age = document.getElementById('age2').value,
-        gender = document.querySelector('#bmi-si input[name = "gender"]:checked').value,
-        heightCm = document.getElementById('cm').value,
-        weightKg = document.getElementById('kg').value;
-        
-        status = checkInputStatus([age, heightCm, weightKg]);
-
-        if(status === true){
-            return calculateBMI({
-                gender,
-                age,
-                height: parseFloat(heightCm) / 100,
-                weight: parseFloat(weightKg)
-            });
-        }
-    }
-
-    document.querySelector('.alert-error').style.display = "block";
-    setTimeout(() => {
-        document.querySelector('.alert-error').style.display = "none";
-    }, 1000);
-    return false;
-}
-
-function checkInputStatus(inputs){
-    for(let i = 0; i < inputs.length; i++){
-        if(inputs[i].trim() === "" || isNaN(inputs[i])) return false;
-    }
-    return true;
-}
-
-// calculate BMI Value
-function calculateBMI(values){
-    let BMI;
-    if(activeForm === 'bmi-usc'){
-        BMI = (703 * (values.weight / Math.pow(values.height, 2))).toFixed(2);
-    } else {
-        BMI = (values.weight / Math.pow(values.height, 2)).toFixed(2);
-    }
-    return {gender: values.gender, BMI};
-}
-
-// print BMI result information
-function printBMIResult(BMIInfo){
-    document.getElementById('bmi-value').innerHTML = `${BMIInfo.BMI} kg/m<sup>2</sup>`;
-
-    let bmiCategory;
-    if(BMIInfo.BMI < 18.5){
-        bmiCategory = "Underweight";
-    } else if(BMIInfo.BMI >= 18.5 && BMIInfo.BMI <= 24.9){
-        bmiCategory = "Normal Weight";
-    } else if(BMIInfo.BMI >= 25 && BMIInfo.BMI <= 29.9){
-        bmiCategory = "Overweight";
-    } else {
-        bmiCategory = "Obesity";
-    }
-
-    document.getElementById('bmi-category').innerHTML = `${bmiCategory}`;
-    document.getElementById('bmi-gender').innerHTML = BMIInfo.gender;
-}
-    </script>
-  </body>
-</html>
-
-
-<style>
-
-
-
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Get Your BMI</title>
+	</head>
+	<style media="screen">
+		
 button{
   font-size: 15px;
   padding:7px;
@@ -296,149 +33,98 @@ button{
 }
 
 
+		body{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.5),#009688),url(images/banner.jpg);
+            background-size: cover;
+            background-position: center;
+			height: 100vh;
+		}
+		div{
+			width: 500px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: #fff;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 20px #009688;
+		}
+		h2{
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.text{
+			text-align: left;
+			margin-left: 150px;
+		}
+		#w, #h{
+			color: #009688;
+			text-align: left;
+			font-size: 20px;
+			font-weight: 200;
+			outline: none;
+			border: none;
+			background: none;
+			border-bottom: 1px solid #009688;
+			width: 200px;
+		}
+			#w:focus, #h:focus{
+				border-bottom: 2px solid #009688;
+				width: 300px;
+				transition: 0.5s;
+			}
+			#result{
+				color: #009688;
+			}
+			#btn{
+				font-family: inherit;
+				margin-top: 10px;
+				border: none;
+				color: #fff;
+				background-image: linear-gradient(120deg,#009688, #009688);
+				width: 150px;
+				padding: 10px;
+				border-radius: 30px;
+				outline: none;
+				cursor: pointer;
+			}
+			#btn:hover{
+				box-shadow: 1px 1px 10px #009688;
+			}
+			#info{
+				font-size: 12px;
+				font-family: inherit;
+			}
+	</style>
+	<script type="text/javascript">
+		function BMI() {
+			var h=document.getElementById('h').value;
+			var w=document.getElementById('w').value;
+			var bmi=w/(h/100*h/100);
+			var bmio=(bmi.toFixed(2));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
-
-:root{
-    background: linear-gradient(rgba(0,0,0,0.5),#009688),url(images/banner.jpg);
-    background-size: cover;
-    background-position: center;
-    --magenta: #009688;
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 2px;
-}
-body{
-    font-family: 'Lato', sans-serif;
-    background: var(--tyrian-purple);
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.9);
-}
-.container{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-}
-.main-wrapper{
-    max-width: 1080px;
-    background: #CDCDCD;
-    width: 480px;
-    height: 620px;
-    border-radius: 5px;
-}
-.bmi-heads{
-    background: var(--magenta);
-    color: #000000;
-    display: flex;
-    align-items: center;
-}
-.bmi-heads .bmi-head{
-    padding: 1rem 1.6rem;
-    width: 100%;
-    cursor: pointer;
-}
-.active-head{
-    background: #CDCDCD;
-}
-.bmi-content{
-    padding: 2rem;
-}
-.form-group{
-    padding: 0.55rem 0;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
-    border-radius: 5px;
-}
-.form-group.col-3{
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    align-items: center;
-}
-.form-control{
-    width: 100%;
-    font-size: 1.15rem;
-    font-family: inherit;
-    padding: 0.6rem 1.2rem;
-    margin: 0.2rem 0;
-    border: 1.5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-.form-control:focus{
-    outline: 0;
-}
-.form-control::placeholder{
-    text-align: right;
-    opacity: 0.6;
-}
-.btns{
-    padding: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.btns .btn{
-    width: 140px;
-    margin: 0 0.5rem;
-    padding: 0.8rem 0;
-    font-family: inherit;
-    font-size: 1.15rem;
-    border: none;
-    background: var(--magenta);
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    letter-spacing: 0.5px;
-}
-.btns .btn:hover{
-    outline: 0;
-    opacity: 0.9;
-}
-.btns .btn:focus{
-    outline: 0;
-}
-#bmi-usc, #bmi-si{
-    display: none;
-}
-/* js related */
-.show-bmi{
-    display: block!important;
-}
-.alert-error{
-    text-align: center;
-    padding: 1rem 1.6rem 0;
-    color: var(--magenta);
-    display: none;
-}
-.bmi-output{
-    padding: 1rem 1.6rem;
-    text-align: center;
-}
-#bmi-value{
-    padding-bottom: 0.4rem;
-}
-#bmi-category{
-    color: var(--magenta);
-}
-#bmi-gender{
-    text-transform: capitalize;
-}
-</style>
+			document.getElementById("result").innerHTML="Your BMI is " + bmio;
+		}
+	</script>
+	<body>
+		<div>
+			<h2>Get Your BMI</h2>
+			<p class="text">Height</p>
+			<input type="text" id="h">
+			<p class="text">Weight</p>
+			<input type="text" id="w">
+			<p id="result"></p>
+			<button id="btn" onClick="BMI()">Calculate</button>
+			<div id = "containerx">
+				<button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
+			</div>
+			<p id="info">Please enter height [cm] and weight [kg]</p>
+            <p>Want to know more about your BMI?</p>
+		</div>
+	</body>
+</html>
