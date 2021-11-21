@@ -46,6 +46,9 @@
         <div id = "containerx">
          <button id="btnOne" value="Go back!">Home</button>
         </div>
+        <div id = "containerx">
+      <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
+      </div>
 				</div>
 			</div>
 		</div>
