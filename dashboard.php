@@ -148,7 +148,7 @@ body{
 	padding-top: 25px;
 }
 .user-p img {
-	width: 100px;
+	width: 100%;
 	border-radius: 50%;
 }
 .user-p h4 {
