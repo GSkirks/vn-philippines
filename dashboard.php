@@ -148,8 +148,8 @@ body{
 	padding-top: 25px;
 }
 .user-p img {
-	width: 100%;
-	border-radius: 50%;
+	width: 100px;
+	border-radius: 50px;
 }
 .user-p h4 {
 	color: #ccc;
