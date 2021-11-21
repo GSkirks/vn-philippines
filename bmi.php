@@ -128,8 +128,8 @@ button{
             
             <button><a href="index.php">Home</button></a>
           
-			
-            <p>Want to know more about your BMI?</p>
+			<a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_dis">
+            <p>Want to know more about your BMI?</p></a>
 		</div>
 	</body>
 </html>
