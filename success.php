@@ -10,7 +10,7 @@
       <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWQDGJLBjZXJSvxQdCJrzWtJbdbHWcBhbHQpXkSShgwzMNDGwWhJwqtckLDMDqZFkhgZL"
       <u>myvirtualnutritionistph@gmail.com</u></a>
       <div id = "containerx">
-        <a href="home.php">
+        <a href="index.php">
         <button id="btnOne" value="Go back!" a href ="home.php">Home</button></a>
         </div>
     </p>

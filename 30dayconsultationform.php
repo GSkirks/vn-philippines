@@ -18,19 +18,21 @@ require_once ('config.php');
 if (isset($_POST['add-submit'])) {
     
     
-    $fullname       = $_POST['fname'];
-    $age            = $_POST['aged'];
-    $gender         = @$_POST['gen'];
-    $email          = $_POST['mail'];
-    $phonenumber    = $_POST['num'];
-    $address        = $_POST['add'];
-    $postalcode     = $_POST['pscode'];
+  $fullname       = $_POST['fname'];
+  $age            = $_POST['aged'];
+  $gender         = @$_POST['gen'];
+  $email          = $_POST['mail'];
+  $phonenumber    = $_POST['num'];
+  $address        = $_POST['add'];
+  $postalcode     = $_POST['pscode'];
 
-    $sql = "INSERT INTO users (fullname, age, gender, email, phonenumber, addrss, plan) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmtinsert = $db->prepare($sql);
-    $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
-    if ($result){
-      header("Location: 30daypaymethod.php");
+  $sql = "INSERT INTO `users`(`fullname`, `age`, `gender`, `email`, `phonenumber`, `addrss`, `plan`) VALUES ('$fullname','$age','$gender','$email','$phonenumber','$address','$postalcode')";
+  
+  
+  $result = $conn->query($sql);
+
+  if ($result == TRUE) {
+    echo("<script>window.location = '30daypaymethod.php';</script>");
       exit();;
     }else{
       echo 'error';
@@ -41,8 +43,6 @@ if (isset($_POST['add-submit'])) {
 
 
 <div>
-<a href="" class="a">&#8249;</a>
-
 <form method="post">
 <div class="wrapper">
     <div class="title">
