@@ -1,7 +1,4 @@
 <?php
-
-use Stripe\Terminal\Location;
-
 require_once ('config.php');
 ?>
 
@@ -21,19 +18,21 @@ require_once ('config.php');
 if (isset($_POST['add-submit'])) {
     
     
-    $fullname       = $_POST['fname'];
-    $age            = $_POST['aged'];
-    $gender         = @$_POST['gen'];
-    $email          = $_POST['mail'];
-    $phonenumber    = $_POST['num'];
-    $address        = $_POST['add'];
-    $postalcode     = $_POST['pscode'];
+  $fullname       = $_POST['fname'];
+  $age            = $_POST['aged'];
+  $gender         = @$_POST['gen'];
+  $email          = $_POST['mail'];
+  $phonenumber    = $_POST['num'];
+  $address        = $_POST['add'];
+  $postalcode     = $_POST['pscode'];
 
-    $sql = "INSERT INTO users (fullname, age, gender, email, phonenumber, addrss, plan) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmtinsert = $db->prepare($sql);
-    $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
-    if ($result == TRUE){
-      header("location: 7daypaymethod.php");
+  $sql = "INSERT INTO `users`(`fullname`, `age`, `gender`, `email`, `phonenumber`, `addrss`, `plan`) VALUES ('$fullname','$age','$gender','$email','$phonenumber','$address','$postalcode')";
+  
+  
+  $result = $conn->query($sql);
+
+  if ($result == TRUE) {
+    echo("<script>window.location = '7daypaymethod.php';</script>");
     }else{
       echo 'error';
     }
