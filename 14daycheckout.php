@@ -3,8 +3,8 @@ require 'vendor/autoload.php';
  \Stripe\Stripe::setApiKey('sk_test_51JqtqcH7cbmE6hoE6G5XShinSS6lI1mPrVcB3DTfPdaUF3pSFZ0VODblDELK8mbMzFgfxyStY7752ZuyzBMwhiDd00Ho1d4p1c');
 
   $checkout_session = \Stripe\Checkout\Session::create([
-    'success_url' => 'http://localhost/vn-philippines/success.php',
-    'cancel_url' => 'http://localhost/vn-philippines/cancel.html',
+    'success_url' => 'https://vn-philippines.herokuapp.com/success.php',
+    'cancel_url' => 'https://vn-philippines.herokuapp.com/cancel.php',
       'payment_method_types' => ['card'],
       'mode' => 'subscription',
       'line_items' => [[
