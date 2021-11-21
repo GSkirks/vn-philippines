@@ -1,5 +1,5 @@
 <?php 
-require_once "admconfig.php";
+require_once "config.php";
 
 //write the query to get data from users table
 
