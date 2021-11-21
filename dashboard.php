@@ -25,7 +25,7 @@
 	<div class="body">
 		<nav class="side-bar">
 			<div class="user-p">
-				<img src="admimages/admin.jpg">
+				<img src="admimages/user1.jpg">
 				<h4>Kimpoy</h4>
 			</div>
 			<ul>
