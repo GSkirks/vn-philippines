@@ -120,10 +120,10 @@ button{
 			<input type="text" id="w">
 			<p id="result"></p>
 			<button id="btn" onClick="BMI()">Calculate</button>
-			<div id = "containerx">
+			<p id="info">Please enter height [cm] and weight [kg]</p>
+            <div id = "containerx">
 				<button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
 			</div>
-			<p id="info">Please enter height [cm] and weight [kg]</p>
             <p>Want to know more about your BMI?</p>
 		</div>
 	</body>
