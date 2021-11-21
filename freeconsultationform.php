@@ -31,7 +31,7 @@ if (isset($_POST['add-submit'])) {
     $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
     if ($result){
       echo("<script>alert('Your  free - trial consultation is now active!')</script>");
-      echo("<script>window.location = 'freetrialsuccess.php';</script>");
+      
       exit();
     }else{
       echo 'error';
@@ -43,7 +43,7 @@ if (isset($_POST['add-submit'])) {
 
 <div>
 
-<form method="post">
+<form method="post" action="freetrialsuccess.php">
 <div class="wrapper">
     <div class="title">
     <div class="container">
