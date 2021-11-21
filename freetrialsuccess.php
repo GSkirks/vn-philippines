@@ -5,7 +5,9 @@
   <h2 class="my-4 text-center">Your  free - trial consultation is now active!</h2>
     <p class = "my-4 text-center">
       Thank you for your time.
-      If you have any questions, please email us at <u>myvirtualnutritionistph@gmail.com</u>
+      If you have any questions, please email us at 
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWQDGJLBjZXJSvxQdCJrzWtJbdbHWcBhbHQpXkSShgwzMNDGwWhJwqtckLDMDqZFkhgZL"
+      <u>myvirtualnutritionistph@gmail.com</u></a>
       <div id = "containerx">
         <a href="index.php">
         <button id="btnOne" value="Go back!">Home</button></a>

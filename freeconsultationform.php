@@ -1,5 +1,5 @@
 <?php
-require_once ('admconfig.php');
+require_once ('config.php');
 ?>
 
 
@@ -31,7 +31,7 @@ if (isset($_POST['add-submit'])) {
     $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
     if ($result){
       echo("<script>alert('Your  free - trial consultation is now active!')</script>");
-      
+    
       exit();
     }else{
       echo 'error';
