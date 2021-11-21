@@ -1,5 +1,5 @@
 <?php
-require_once ('config.php');
+require_once ('admconfig.php');
 
 
 if (isset($_POST['add-submit'])) {
