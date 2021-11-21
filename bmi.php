@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
 <!-- Start of LiveChat (www.livechatinc.com) code -->
 <script>
     window.__lc = window.__lc || {};
@@ -10,8 +14,17 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+
+
+
+
+
+
+
+
+
+
 	<head>
     <style>
     a { text-decoration: none; }
