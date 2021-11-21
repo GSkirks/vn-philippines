@@ -16,6 +16,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+    a { text-decoration: none; }
+  </style>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,7 +28,7 @@
 
 	<title>Payment Method</title>
 </head>
-<body>
+<body a link="#009688" vlink="#009688">
 	
 	<div class="modal">
 		<div class="modal-box">
