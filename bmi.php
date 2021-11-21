@@ -125,9 +125,9 @@ button{
 			<button id="btn" onClick="BMI()">Calculate</button>
 			<p id="info">Please enter height [cm] and weight [kg]</p>
 
-            <div id = "containerx">
-            <a href="index.php">Home</button></a>
-          </div>
+            
+            <button><a href="index.php">Home</button></a>
+          
 			
             <p>Want to know more about your BMI?</p>
 		</div>
