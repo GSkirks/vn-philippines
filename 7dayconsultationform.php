@@ -30,7 +30,7 @@ if (isset($_POST['add-submit'])) {
     $stmtinsert = $db->prepare($sql);
     $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
     if ($result){
-      header("Location: 7daypaymethod.php");
+      header("https://vn-philippines.herokuapp.com/7daypaymethod.php");
         exit();
     }else{
       echo 'error';
