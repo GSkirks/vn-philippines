@@ -43,8 +43,9 @@
                 <br><br>
                 <b>2. </b>Choose your desired plan and upload your proof of payment.
             </p>
+        <a href="index.php"
         <div id = "containerx">
-         <button id="btnOne" value="Go back!">Home</button>
+         <button id="btnOne" value="Go back!">Home</button></a>
         </div>
 				</div>
 			</div>
