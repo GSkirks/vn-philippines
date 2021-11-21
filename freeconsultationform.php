@@ -30,7 +30,8 @@ if (isset($_POST['add-submit'])) {
     $stmtinsert = $db->prepare($sql);
     $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
     if ($result){
-      header("Location: 7daycheckout.php");
+      echo("<script>alert('Your  free - trial consultation is now active!')</script>");
+      echo("<script>window.location = 'freetrialsuccess.php';</script>");
       exit();
     }else{
       echo 'error';
