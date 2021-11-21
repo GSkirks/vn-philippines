@@ -26,7 +26,7 @@
 	<title>Payment Method</title>
 </head>
 <body>
-	<form action="index.php">
+	
 	<div class="modal">
 		<div class="modal-box">
 			<!-- <div class="icon">
@@ -44,8 +44,11 @@
                 <b>2. </b>Choose your desired plan and upload your proof of payment.
             </p>
         <div id = "containerx">
-         <button id="btnOne" value="Go back!">Home</button>
+         <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
         </div>
+        <div id = "containerx">
+            <a href="../index.php">Home</button></a>
+          </div>
         
 				</div>
 			</div>
