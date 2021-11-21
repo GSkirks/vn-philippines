@@ -1,4 +1,7 @@
 <?php
+
+use Stripe\Terminal\Location;
+
 require_once ('config.php');
 ?>
 
@@ -29,9 +32,8 @@ if (isset($_POST['add-submit'])) {
     $sql = "INSERT INTO users (fullname, age, gender, email, phonenumber, addrss, plan) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmtinsert = $db->prepare($sql);
     $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
-    if ($result){
-      header("https://vn-philippines.herokuapp.com/7daypaymethod.php");
-        exit();
+    if ($result == TRUE){
+      header("location: 7daypaymethod.php");
     }else{
       echo 'error';
     }

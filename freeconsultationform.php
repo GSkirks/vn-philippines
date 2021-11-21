@@ -26,7 +26,7 @@ if (isset($_POST['add-submit'])) {
     $address        = $_POST['add'];
     $postalcode     = $_POST['pscode'];
 
-    $sql = "INSERT INTO users (fullname, age, gender, email, phonenumber, addrss, plan) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO `users`(`fullname`, `age`, `gender`, `email`, `phonenumber`, `addrss`, `plan`) VALUES ('$fullname','$age','$gender','$email','$phonenumber','$address','$postalcode')";
     $stmtinsert = $db->prepare($sql);
     $result = $stmtinsert->execute([$fullname, $age, $gender, $email, $phonenumber, $address, $postalcode]);
     if ($result){
