@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
+    <style>
+    a { text-decoration: none; }
+  </style>
 		<meta charset="utf-8">
 		<title>Get Your BMI</title>
 	</head>
@@ -111,7 +114,7 @@ button{
 			document.getElementById("result").innerHTML="Your BMI is " + bmio;
 		}
 	</script>
-	<body>
+	<body a link="#009688" vlink="#009688">
 		<div>
 			<h2>Get Your BMI</h2>
 			<p class="text">Height</p>
@@ -121,9 +124,11 @@ button{
 			<p id="result"></p>
 			<button id="btn" onClick="BMI()">Calculate</button>
 			<p id="info">Please enter height [cm] and weight [kg]</p>
+
             <div id = "containerx">
-				<button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
-			</div>
+            <a href="index.php">Home</button></a>
+          </div>
+			
             <p>Want to know more about your BMI?</p>
 		</div>
 	</body>
