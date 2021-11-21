@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
             <input type="submit" name="submit" value="Login">
           </div>    
           <div id = "containerx">
-            <a href="../index.php">Home</button></a>
+            <a href="index.php">Home</button></a>
           </div>
         </form>
       </div>
