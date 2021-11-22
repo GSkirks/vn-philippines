@@ -24,8 +24,8 @@
 				<h4 class="title">Payment Method</h4>
 				<p class="desc">Choose your payment method</p>
 				<div class="modal-links">
-					<a href="gcash.php">Pay with Gcash</a>
-					<a href="7daygcash.php">Pay with Card</a>
+					<a href="7daygcash.php">Pay with Gcash</a>
+					<a href="7daycheckout.php">Pay with Card</a>
                     <div id = "containerx">
       <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
       </div>
