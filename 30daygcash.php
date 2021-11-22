@@ -41,7 +41,7 @@
 			<div class="content">
 				<h4 class="title">Pay with Gcash</h4>
 				<p class="desc"><b>Please follow these steps to pay with Gcash:</b><br><br>
-				<b>1. </b>Chat <b>"Pay with gcash"</b> in the live chat located at the bottom<br>
+				<b>1. </b>Chat <b>"Pay with gcash ULTIMATE"</b> in the live chat located at the bottom<br>
                  right of the screen.
                 <br><br>
                 <b>2. </b>Choose your desired plan and upload your proof of payment.
@@ -50,7 +50,7 @@
          <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
         </div>
         <div id = "containerx">
-            <a href="../index.php">Home</button></a>
+            <a href="index.php">Home</button></a>
           </div>
         
 				</div>

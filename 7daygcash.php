@@ -1,6 +1,24 @@
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 13278261;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/13278261/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+    a { text-decoration: none; }
+  </style>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +28,7 @@
 
 	<title>Payment Method</title>
 </head>
-<body>
+<body a link="#009688" vlink="#009688">
 	
 	<div class="modal">
 		<div class="modal-box">
@@ -18,21 +36,28 @@
 				<i class="fa fa-times"></i>
 			</div> -->
 			<div class="imgBox">
-				<img src="images/phone.png" alt="Image">
+				<img src="images/gcash.png" alt="Image">
 			</div>
 			<div class="content">
-				<h4 class="title">Payment Method</h4>
-				<p class="desc">Choose your payment method</p>
-				<div class="modal-links">
-					<a href="gcash.php">Pay with Gcash</a>
-					<a href="14daygcash.php">Pay with Card</a>
-                    <div id = "containerx">
-      <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
-      </div>
+				<h4 class="title">Pay with Gcash</h4>
+				<p class="desc"><b>Please follow these steps to pay with Gcash:</b><br><br>
+				<b>1. </b>Chat <b>"Pay with gcash PROFFESSIONAL"</b> in the live chat located at the bottom<br>
+                 right of the screen.
+                <br><br>
+                <b>2. </b>Choose your desired plan and upload your proof of payment.
+            </p>
+        <div id = "containerx">
+         <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
+        </div>
+        <div id = "containerx">
+            <a href="index.php">Home</button></a>
+          </div>
+        
 				</div>
 			</div>
 		</div>
 	</div>
+    </form>
 </body>
 </html>
 
@@ -45,9 +70,9 @@ button{
   padding:7px;
   border-radius: 4px;
   margin:5px;
-  color: #009688 ;
+  color: #fff ;
   position: relative;
-  background: #fbfaff;
+  background: #009688 ;
   width: 10rem;
   border: none;
   outline: none;
