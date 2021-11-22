@@ -1,22 +1,104 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-    <style>
+<style>
     a { text-decoration: none; }
   </style>
-		<meta charset="utf-8">
-		<title>Get Your BMI</title>
-	</head>
-	<style media="screen">
-		
+<div class="container">
+<body a link="#009688" vlink="#009688">
+  <div class="box">
+    <h1>Get Your BMI</h1>
+    <div class="content">
+      <div class="input">
+        <label for="height">Height(cm)</label>
+        <input type="number" id="height">
+      </div>
+      <div class="input">
+        <label for="weight">Weight(kg)</label>
+        <input type="number" id="weight">
+      </div>
+      <button id="calculate">Calculate BMI</button>
+    </div>
+    
+    <div class="result">
+      <p>Your BMI is</p>
+      <div id="result">00.00</div>
+      <p class="comment"></p>
+      <button><a href="index.php">Home</button></a>
+    </div>
+  </div>
+</div>
+
+<script>
+    const btn = document.getElementById('calculate');
+
+btn.addEventListener('click', function(){
+
+    let height = document.querySelector('#height').value;
+    let weight = document.querySelector('#weight').value;
+
+    if(height == '' || weight == ''){
+        alert('Please fill out the input fields!');
+        return;
+    }
+
+   // BMI = weight in KG / (height in m * height in m)
+
+   height = height / 100
+
+   let BMI = (weight / (height * height));
+
+   BMI = BMI.toFixed(2);
+
+   document.querySelector('#result').innerHTML = BMI;
+
+    let status = '';
+
+    if(BMI < 18.5){
+        status = "Underweight";
+    } 
+    if(BMI >=18.5 && BMI < 25){
+        status = "Healthy";
+    }
+    if(BMI >=25 && BMI < 30){
+        status = "Overweight";
+    }
+    if(BMI >=30){
+        status = "Obese";
+    }
+    document.querySelector('.comment').innerHTML = `You are <span id="comment">${status}</span>`;
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
 button{
   font-size: 15px;
   padding:7px;
   border-radius: 4px;
-  margin:5px;
+  margin:-10px;
   color: #009688 ;
   position: relative;
-  background: #fbfaff;
+  background: #fff;
   width: 10rem;
   border: none;
   outline: none;
@@ -27,27 +109,66 @@ button{
   0 15px 89px rgba(0, 0, 0, 0.13);
 }
 
-#containerx{
+/* #containerx{
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   outline: none;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&family=Montserrat&display=swap");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
-
-
-		body{
-			margin: 0;
-			padding: 0;
-			text-align: center;
-			font-family: sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.5),#009688),url(images/banner.jpg);
-            background-size: cover;
-            background-position: center;
-			height: 100vh;
-		}
-		div{
-			width: 500px;
+body{
+    height: 110vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688),url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* not sure -50% */
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px #009688;
+}
+.box{
+    min-width: 400px;
+    background: #fff;
+    border-radius: 38px;
+    text-align: center;
+    position: relative;
+}
+/* .box::before{
+    width: 500px;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -56,80 +177,74 @@ button{
 			padding: 20px;
 			border-radius: 10px;
 			box-shadow: 1px 1px 20px #009688;
-		}
-		h2{
-			font-size: 30px;
-			font-weight: 600;
-		}
-		.text{
-			text-align: left;
-			margin-left: 150px;
-		}
-		#w, #h{
-			color: #009688;
-			text-align: left;
-			font-size: 20px;
-			font-weight: 200;
-			outline: none;
-			border: none;
-			background: none;
-			border-bottom: 1px solid #009688;
-			width: 200px;
-		}
-			#w:focus, #h:focus{
-				border-bottom: 2px solid #009688;
-				width: 300px;
-				transition: 0.5s;
-			}
-			#result{
-				color: #009688;
-			}
-			#btn{
-				font-family: inherit;
-				margin-top: 10px;
-				border: none;
-				color: #fff;
-				background-image: linear-gradient(120deg,#009688, #009688);
-				width: 150px;
-				padding: 10px;
-				border-radius: 30px;
-				outline: none;
-				cursor: pointer;
-			}
-			#btn:hover{
-				box-shadow: 1px 1px 10px #009688;
-			}
-			#info{
-				font-size: 12px;
-				font-family: inherit;
-			}
-	</style>
-	<script type="text/javascript">
-		function BMI() {
-			var h=document.getElementById('h').value;
-			var w=document.getElementById('w').value;
-			var bmi=w/(h/100*h/100);
-			var bmio=(bmi.toFixed(2));
-
-			document.getElementById("result").innerHTML="Your BMI is " + bmio;
-		}
-	</script>
-	<body a link="#009688" vlink="#009688">
-		<div>
-			<h2>Get Your BMI</h2>
-			<p class="text">Height</p>
-			<input type="text" id="h">
-			<p class="text">Weight</p>
-			<input type="text" id="w">
-			<p id="result"></p>
-			<button id="btn" onClick="BMI()">Calculate</button>
-			<p id="info">Please enter height [cm] and weight [kg]</p>
-
-            
-            <button><a href="index.php">Home</button></a>
-          
-			<a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_dis">
-            <p>Want to know more about your BMI?</p></a>
-		</div>
-	</body>
-</html>
+} */
+h1{
+    font-weight: bold;
+    font-size: 36px;
+    padding: 30px 0;
+}
+.content{
+    padding: 0 40px;
+}
+.input{
+    background: #FFF;
+    box-shadow: 0px 0px 95px -30px rgba(0,0,0,0.15);
+    border-radius: 28px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.input label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+.input input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #009688;
+    width: 60%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Nunito', sans-serif;
+}
+button#calculate{
+    font-family: 'Nunito', sans-serif;
+    color: #FFF;
+    background: #009688;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: background .2s ease;
+}
+button#calculate:hover{
+    background: #009688;
+}
+.result{
+    padding: 30px 20px;
+}
+.result p{
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 15px;
+}
+.result #result{
+    font-size: 36px;
+    font-weight: 900;
+    color: #009688;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+}
+#comment{
+    color: #009688;
+    font-weight: 800;
+}
+</style>
