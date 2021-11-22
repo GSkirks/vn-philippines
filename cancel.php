@@ -8,7 +8,7 @@
       If you have any questions, please email us at <u>myvirtualnutritionistph@gmail.com</u>
       <div id = "containerx">
         <a href="home.php">
-        <button id="btnOne" value="Go back!" a href ="home.php">Home</button></a>
+        <button id="btnOne" value="Go back!" a href ="index.php">Home</button></a>
         </div>
     </p>
   </body>
