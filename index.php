@@ -624,7 +624,7 @@ hr{
             </div>
             </div>
             <p>Wonderful experience with Virtual Nutritionist PH. Ms. Hernandez
-                was a wonderful nutritionist-dietician, and the chat agents was always helpful
+                was a wonderful Nutritionist-Dietician, and the chat agents was always helpful
                 and kind. They ensured I had a smooth prep, consultation, and follow-up.
                 I am so glad I chose Virtual Nutritionist PH and would highly recommend to anyone.</p>
         </div>
@@ -649,7 +649,7 @@ hr{
                 <small>@ellabriones_</small>
             </div>
             </div>
-            <p>Dr. Cleofe is a great nutrionist-dietician! She’s very understanding
+            <p>Dr. Cleofe is a great Nutrionist-Dietician! She’s very understanding
                 and listens to your concerns. She takes time with the
                 patient to help them with their nutritional issues! I highly
                 recommend her to anyone looking for a specialist</p>
