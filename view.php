@@ -38,8 +38,8 @@ $result = $conn->query($sql);
 		<th>Age</th>
 		<th>Gender</th>
 		<th>Email</th>
-		<th>Phone Number</th>
 		<th>Address</th>
+		<th>Reason</th>
 		<th>Type of Plan</th>
 	</tr>
 	</thead>
