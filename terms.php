@@ -6,15 +6,12 @@ require_once ('config.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    a { text-decoration: none; }
-  </style>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Make an Appointment</title>
 	<link rel="stylesheet">
 </head>
-<body a link="#009688" vlink="#009688">
+<body>
 
 <div>
 <?php
@@ -52,65 +49,42 @@ if (isset($_POST['add-submit'])) {
     <div class="title">
     <div class="container">
 </div>
-      Make an Appointment
+      Terms and Conditions
     </div>
-    <div class="form">
-       <div class="inputfield">
-          <label for="fname">Full Name</label>
-          <input type="text" name="fname" class="input" required>
-       </div>  
+    <p class="desc">As with any medical procedure, there are potential risks associated with the use of telemedicine. Facility believes that the likelihood of these risks materializing is very low. These risks may include, without limitation, the following:<br><br>
 
-       <div class="inputfield">
-          <label for="aged">Age</label>
-          <input type="age" name="aged" class="input" required>
-       </div> 
-
-
-     <div class="inputfield">
-          <label for="gen">Gender</label>
-          <input type="text" name="gen" class="input"required>
-       </div> 
-
-
-      <div class="inputfield">
-          <label for="mail">Email Address</label>
-          <input type="email" name="mail" class="input" required>
-       </div> 
-
-      <div class="inputfield">
-          <label for="num">Phone Number</label>
-          <input type="number" maxlength="11" name="num" class="input"required>
-       </div> 
-
-      <div class="inputfield">
-          <label for="add">Address</label>
-          <textarea type="text" name="add" class="textarea"required></textarea>
-       </div> 
-
-      <div class="inputfield">
-          <label for="pscode">Type of Plan</label>
-          <input type="text" value="Free-trial Nutrition Plan" name="pscode" class="input" readonly>
-       </div> 
-
-      <div class="inputfield terms">
-          <label class="check">
-            <input type="checkbox" required>
-            <span class="checkmark"></span>
-          </label>
-          <p><a href="terms.php">
-        Agreed to terms and conditions</p></a>
-       </div> 
-       
-      <div class="inputfield">
-        <input type="submit" name="add-submit" class="btn" id="show-modal">
-      </div>     
+Delays in medical evaluation and consultation or treatment may occur due to deficiencies or failures of the equipment which may include poor video and data quality.
+Security protocols could fail, causing a breach of privacy of personal medical information.
+Lack of access to complete medical records may result in adverse drug interactions or allergic reactions or other negative outcomes.<br><br><br><br>
+By accepting these Terms of Use, you acknowledge that you understand and agree with the following:<br><br>
+You understand that the laws that protect privacy and the confidentiality of medical information also apply to telemedicine. Links are provided above to the Facility Notice of Privacy Practices and the Online Care Group Notice of Privacy Practices which explains this in greater detail.
+You understand that telemedicine may involve electronic communication of your personal medical information to medical practitioners who may be located in other areas, including out of state.
+You understand that you may expect the anticipated benefits from the use of telemedicine, but that no results can be guaranteed or assured.
+You understand that all information will be part of your medical record and available to you by printing the summary from the visit. This information will have the same restrictions on dissemination without your consent.</p>
       <div id = "containerx">
-      <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
+      <button id="btnOne" onclick="window.history.go(-1); return false;">Back</button>
       </div>
+      
       </form>
     </div>
 </div>	
 </body>
+
+
+
+
+<!-- <script>
+function goBack() {
+  window.history.back();
+}
+</script> -->
+
+
+
+
+
+
+
 
 <style>
 
@@ -119,7 +93,12 @@ if (isset($_POST['add-submit'])) {
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
-
+.desc {
+    margin: 20px 0;
+    text-align: center;
+    color: #444;
+    font-size: .9rem;
+}
 
 
 button{

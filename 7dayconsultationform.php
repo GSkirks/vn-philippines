@@ -6,12 +6,15 @@ require_once ('config.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    a { text-decoration: none; }
+  </style>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Make an Appointment</title>
 	<link rel="stylesheet">
 </head>
-<body>
+<body a link="#009688" vlink="#009688">
 
 <div>
 <?php
@@ -90,7 +93,7 @@ if (isset($_POST['add-submit'])) {
             <input type="checkbox" required>
             <span class="checkmark"></span>
           </label>
-          <p>Agreed to terms and conditions</p>
+          <p><a href="terms.php">Agreed to terms and conditions</p></a>
        </div> 
      
        <div class="inputfield">
