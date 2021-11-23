@@ -485,7 +485,7 @@ hr{
         <p>Your Personal Healthcare Companion</p>
         <div class="banner-btn">
             <a href="bmi.php"><span></span>Get Your BMI</a>
-            <a href="subsplans.php"><span></span>Subscribe Now</a>
+            <a href="subsplans.php"><span></span>Consult Now</a>
         </div>
     </div>
 </section>
@@ -667,8 +667,8 @@ hr{
 <div class="footer-row">
     <div class="footer-left">
         <h1>Opening Hours</h1>
-        <p><i class="far fa-clock"></i>Monday to Friday - 8am to 8pm</p>
-        <p><i class="far fa-clock"></i>Saturday and Sunday - 8am to 11pm</p>
+        <p><i class="far fa-clock"></i>Monday to Sunday - 8am to 8pm</p>
+        <!-- <p><i class="far fa-clock"></i>Saturday and Sunday - 8am to 11pm</p> -->
     </div>
     <div class="footer-right">
         <h1>Get In Touch</h1>

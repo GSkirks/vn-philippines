@@ -1,94 +1,144 @@
+<?php
+require_once ('config.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    a { text-decoration: none; }
+  </style>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Consultation Form</title>
-	<link rel="stylesheet" href="newform.css">
+	<title>Make an Appointment</title>
+	<link rel="stylesheet">
 </head>
-<body>
+<body a link="#009688" vlink="#009688">
 
 <div>
-  <?php
-  if(isset($_POST['next'])){
-    echo 'User submitted.';
+<?php
+if (isset($_POST['add-submit'])) {
+    
+    
+  $fullname       = $_POST['fname'];
+  $age            = $_POST['aged'];
+  $gender         = @$_POST['gen'];
+  $email          = $_POST['mail'];
+  $phonenumber    = $_POST['num'];
+  $address        = $_POST['add'];
+  $postalcode     = $_POST['pscode'];
+
+  $sql = "INSERT INTO `users`(`fullname`, `age`, `gender`, `email`, `phonenumber`, `addrss`, `plan`) VALUES ('$fullname','$age','$gender','$email','$phonenumber','$address','$postalcode')";
+  
+  
+  $result = $conn->query($sql);
+
+  if ($result == TRUE) {
+    echo("<script>window.location = '7daypaymethod.php';</script>");
+    }else{
+      echo 'error';
+    }
   }
-  ?>
+    ?>
 </div>
 
-<form action="consultationform.php" method="post">
+
+<div>
+<form  method="post">
 <div class="wrapper">
     <div class="title">
-      Consultation Form
+      Make an Appointment
     </div>
     <div class="form">
        <div class="inputfield">
-          <label for="height">Height&nbsp;<small>(ft)</small></label>
-          <input type="number" class="input" name="height" required>
+          <label for="fname">Full Name</label>
+          <input type="text" name="fname" class="input" required>
        </div>  
 
        <div class="inputfield">
-          <label for="weight">Weight&nbsp;<small>(kg)</small></label>
-          <input type="number" class="input" name="weight" required>
-       </div>  
-
-       <div class="inputfield">
-          <label for="bodymassindex">Body Mass Index</label>
-          <div class="custom_select">
-            <select required>
-              <option value=""></option>
-              <option value="male">Normal</option>
-              <option value="female">Underweight</option>
-              <option value="female">Obese</option>
-            </select>
-          </div>
+          <label for="aged">Age</label>
+          <input type="number" name="aged" class="input" required>
        </div> 
 
-        <div class="inputfield">
-          <label for="waistcirc">Waist Circumference&nbsp;<small>(in)</small></label>
-          <input type="number" name="waistcirc" class="input" required>
+
+     <div class="inputfield">
+          <label for="gen">Gender</label>
+          <input type="text" name="gen" class="input"required>
        </div> 
 
-       <div class="inputfield">
-        <label for="hipcirc">Hip Circumference&nbsp;<small>(in)</small></label>
-        <input type="number" class="input" name="hipcirc" required>
-       </div> 
-       
-       <div class="inputfield">
-        <label for="neckcirc">Neck Circumference&nbsp;<small>(in)</small></label>
-        <input type="number" class="input" name="neckcirc" required>
-      </div>  
 
       <div class="inputfield">
-          <label for="medicalhistory">Medical Family History</label>
-          <textarea name="medicalhistory" class="textarea" required></textarea>
-      </div> 
+          <label for="mail">Email Address</label>
+          <input type="email" name="mail" class="input" required>
+       </div> 
 
-     <div class="inputfield">
-        <label for="foodallergy">Food Allergy</label>
-        <textarea name="foodallergy" class="textarea" required></textarea>
-     </div> 
+      <div class="inputfield">
+          <label for="add">Address</label>
+          <input type="text" name="add" class="textarea"required></textarea>
+       </div> 
+       <div class="inputfield">
+          <label for="num">Reason for Consulting</label>
+          <textarea type="text" maxlength="11" name="num" class="input" required>
+       </div> 
 
-     <div class="inputfield">
-        <label for="24hourfood">24-Hour Food Recall</label>
-        <textarea name="24hourfood" class="textarea" required></textarea>
-     </div> 
-     <div class="inputfield">
-        <label for="physicalactivity">Physical Activity</label>
-        <textarea name="physicalactivity" class="textarea" required></textarea>
-     </div>   
+      <div class="inputfield">
+          <label for="pscode">Type of Plan</label>
+          <input type="text" value="7-Day Nutrition Plan" name="pscode" class="input" readonly>
+       </div> 
 
-     <div class="inputfield">
-        <input type="submit" name="next" value="Next" class="btn">
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+          </label>
+          <p><a href="terms.php">Agreed to terms and conditions</p></a>
+       </div> 
+     
+       <div class="inputfield">
+        <input type="submit" name="add-submit" class="btn" onclick=>
+      </div>      
+     
+      <div id = "containerx">
+      <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
       </div>
+      </form>
     </div>
 </div>	
-	
 </body>
-</html>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+
+
+button{
+  font-size: 15px;
+  padding:7px;
+  border-radius: 4px;
+  margin:5px;
+  color: #009688 ;
+  position: relative;
+  background: #fbfaff;
+  width: 10rem;
+  border: none;
+  outline: none;
+  box-shadow:
+  0 0.7px 4px rgba(0, 0, 0, 0.045),
+  0 1.9px 11.1px rgba(0, 0, 0, 0.065),
+  0 4.5px 26.8px rgba(0, 0, 0, 0.085),
+  0 15px 89px rgba(0, 0, 0, 0.13);
+}
+
+#containerx{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
 
 *{
   margin: 0;
