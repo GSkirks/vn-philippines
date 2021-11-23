@@ -76,7 +76,7 @@ if (isset($_POST['add-submit'])) {
 
       <div class="inputfield">
           <label for="num">Address</label>
-          <input type="text" maxlength="11" name="num" class="input"required>
+          <input type="text" name="num" class="input"required>
        </div> 
 
       <div class="inputfield">
