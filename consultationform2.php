@@ -35,7 +35,8 @@ if (isset($_POST['add-submit'])) {
   $result = $conn->query($sql);
 
   if ($result == TRUE) {
-    echo("<script>window.location = '7daypaymethod.php';</script>");
+    echo("<script>window.location = '30daypaymethod.php';</script>");
+      exit();;
     }else{
       echo 'error';
     }
@@ -45,7 +46,7 @@ if (isset($_POST['add-submit'])) {
 
 
 <div>
-<form  method="post">
+<form method="post">
 <div class="wrapper">
     <div class="title">
       Make an Appointment
@@ -58,7 +59,7 @@ if (isset($_POST['add-submit'])) {
 
        <div class="inputfield">
           <label for="aged">Age</label>
-          <input type="number" name="aged" class="input" required>
+          <input type="age" name="aged" class="input" required>
        </div> 
 
 
@@ -74,17 +75,18 @@ if (isset($_POST['add-submit'])) {
        </div> 
 
       <div class="inputfield">
-          <label for="add">Address</label>
-          <input type="text" name="add" class="textarea"required></textarea>
+          <label for="num">Address</label>
+          <input type="text" maxlength="11" name="num" class="input"required>
        </div> 
-       <div class="inputfield">
-          <label for="num">Reason for Consulting</label>
-          <textarea type="text" maxlength="11" name="num" class="input" required>
+
+      <div class="inputfield">
+          <label for="add">Reason of Consulting</label>
+          <textarea type="text" name="add" class="textarea" placeholder="Ex. I want to be physically fit" required></textarea>
        </div> 
 
       <div class="inputfield">
           <label for="pscode">Type of Plan</label>
-          <input type="text" value="7-Day Nutrition Plan" name="pscode" class="input" readonly>
+          <input type="text" value="30-Day Nutrition Plan" name="pscode" class="input" readonly>
        </div> 
 
       <div class="inputfield terms">
@@ -94,22 +96,23 @@ if (isset($_POST['add-submit'])) {
           </label>
           <p><a href="terms.php">Agreed to terms and conditions</p></a>
        </div> 
-     
+       
        <div class="inputfield">
-        <input type="submit" name="add-submit" class="btn" onclick=>
+        <input type="submit" name="add-submit" class="btn">
       </div>      
-     
       <div id = "containerx">
-      <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
+      <button id="btnOne" value="Go Back From Whence You Came!" onclick="history.back(-1)" />Back</button>
       </div>
       </form>
     </div>
 </div>	
 </body>
 
+
+
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
-
 
 
 
@@ -138,6 +141,31 @@ button{
   border: none;
   outline: none;
 }
+
+
+
+a{
+text-decoration:none;
+display:inline-block;
+padding: 8px 16px;
+}
+
+a:hover{
+background-color:#ddd;
+color:black;
+}           I
+
+.previous {
+background-color:#009688;
+color:black;
+}
+
+
+
+
+
+
+
 
 
 *{
