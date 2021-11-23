@@ -623,8 +623,8 @@ hr{
                 <small>@serkimpoy</small>
             </div>
             </div>
-            <p>Wonderful experience with Virtual Nutritionist PH. Dr. Hernandez
-                was a wonderful nutritionist, and the chat agents was always helpful
+            <p>Wonderful experience with Virtual Nutritionist PH. Ms. Hernandez
+                was a wonderful nutritionist-dietician, and the chat agents was always helpful
                 and kind. They ensured I had a smooth prep, consultation, and follow-up.
                 I am so glad I chose Virtual Nutritionist PH and would highly recommend to anyone.</p>
         </div>
@@ -636,7 +636,7 @@ hr{
                 <small>@shaliacosta</small>
             </div>
             </div>
-            <p>Dr. Bautista did a great job with my first ever health appointment online.
+            <p>Mr. Bautista did a great job with my first ever health appointment online.
                 He explained everything to me in a very clear manner.
                 He was also kind and friendly. All of the staff was great –
                 they were helpful, patient and helped with my diet and nutrition</p>
