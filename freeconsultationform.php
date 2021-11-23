@@ -77,14 +77,14 @@ if (isset($_POST['add-submit'])) {
           <input type="email" name="mail" class="input" required>
        </div> 
 
-      <div class="inputfield">
-          <label for="num">Phone Number</label>
-          <input type="number" maxlength="11" name="num" class="input"required>
+       <div class="inputfield">
+          <label for="num">Address</label>
+          <input type="text" name="num" class="input"required>
        </div> 
 
       <div class="inputfield">
-          <label for="add">Address</label>
-          <textarea type="text" name="add" class="textarea"required></textarea>
+          <label for="add">Reason of Consulting</label>
+          <textarea type="text" name="add" class="textarea" placeholder="Ex. I want to be physically fit" required></textarea>
        </div> 
 
       <div class="inputfield">
