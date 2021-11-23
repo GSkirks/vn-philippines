@@ -82,7 +82,7 @@ if (isset($_POST['add-submit'])) {
 
       <div class="inputfield">
           <label for="add">Reason of Consulting</label>
-          <textarea type="text" name="add" class="textarea" placeholder="Ex. I want to be physically fit" required></textarea>
+          <textarea type="text" name="add" class="textarea" placeholder="Ex. I want to lose/gain weight" required></textarea>
        </div> 
 
       <div class="inputfield">
