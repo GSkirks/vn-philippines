@@ -5,7 +5,7 @@
   <body a link="#009688" vlink="#009688">
   <h2 class="my-4 text-center">Your  subscription is now active!</h2>
     <p class = "my-4 text-center">
-      You may check your email for receipt.
+    Please let us know when you are available and let's start our first meeting! You may also check your email for receipt.
       If you have any questions, please email us at 
       <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWQDGJLBjZXJSvxQdCJrzWtJbdbHWcBhbHQpXkSShgwzMNDGwWhJwqtckLDMDqZFkhgZL"
       <u>myvirtualnutritionistph@gmail.com</u></a>
