@@ -11,8 +11,8 @@
       <h3 class="pricing-card-header">FREE TRIAL</h3>
       <div class="price"><sup></sup>FREE<span></span></div>
       <ul>
-      <li><strong>3</strong> - day free consultation</li>
-      <br>
+      <li><strong>3</strong>-day free consultation <small>(No personally tailored meal plan</small></li>
+ 
       <br>
       <img src="images/free.jpg"/>
       </ul>
