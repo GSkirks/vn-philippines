@@ -649,7 +649,7 @@ hr{
                 <small>@ellabriones_</small>
             </div>
             </div>
-            <p>Dr. Cleofe is a great Nutrionist-Dietician! She’s very understanding
+            <p>Ms. Cleofe is a great Nutrionist-Dietician! She’s very understanding
                 and listens to your concerns. She takes time with the
                 patient to help them with their nutritional issues! I highly
                 recommend her to anyone looking for a specialist</p>
