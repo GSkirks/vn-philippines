@@ -53,7 +53,7 @@ if (isset($_POST['add-submit'])) {
       Add Patient
     </div>
     <div class="form">
-       <div class="inputfield">
+    <div class="inputfield">
           <label for="fname">Full Name</label>
           <input type="text" name="fname" class="input" required>
        </div>  
@@ -75,21 +75,20 @@ if (isset($_POST['add-submit'])) {
           <input type="email" name="mail" class="input" required>
        </div> 
 
-      <div class="inputfield">
-          <label for="num">Phone Number</label>
-          <input type="number" name="num" class="input"required>
+       <div class="inputfield">
+          <label for="num">Address</label>
+          <input type="text" name="num" class="input"required>
        </div> 
 
       <div class="inputfield">
-          <label for="add">Address</label>
-          <input type="text" name="add" class="input"required>
+          <label for="add">Reason of Consulting</label>
+          <textarea type="text" name="add" class="textarea" placeholder="Ex. I want to lose/gain weight" required></textarea>
        </div> 
 
       <div class="inputfield">
-          <label for="pscode">Nutrition Plan</label>
-          <input type="text" placeholder="Free/7Day/14Day/30Day Nutrition Plan" name="pscode" class="input" required>
+          <label for="pscode">Type of Plan</label>
+          <input type="text" value="7-Day Nutrition Plan" name="pscode" class="input" readonly>
        </div> 
-
       <!-- <div class="inputfield terms">
           <label class="check">
             <input type="checkbox" required>

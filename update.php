@@ -21,10 +21,11 @@ include "admconfig.php";
 		$result = $conn->query($sql);
 
 		if ($result == TRUE) {
-			echo "Record updated successfully.";
-		}else{
-			echo "Error:" . $sql . "<br>" . $conn->error;
-		}
+      echo("<script>alert('Record updated successfully!')</script>");
+      echo("<script>window.location = 'view.php';</script>");
+    }else{
+      echo "Error:" . $sql . "<br>" . $conn->error;
+    }
 	}
 
 
@@ -99,15 +100,14 @@ if (isset($_GET['id'])) {
           <label for="mail">Email Address</label>
           <input type="email" name="mail" class="input" value="<?php echo $email; ?>" required>
        </div> 
-
-      <div class="inputfield">
-          <label for="num">Phone Number</label>
-          <input type="text" name="num" class="input" value="<?php echo $phonenumber; ?>" required>
+       <div class="inputfield">
+          <label for="num">Address</label>
+          <input type="text" name="num" class="input" value="<?php echo $phonenumber; ?>"required>
        </div> 
 
       <div class="inputfield">
-          <label for="add">Address</label>
-          <input type="text" name="add" class="input" value="<?php echo $address; ?>" required></textarea>
+          <label for="add">Reason of Consulting</label>
+          <input type="text" name="add" class="input" value="<?php echo $address; ?>" required>
        </div> 
 
       <div class="inputfield">
@@ -118,6 +118,10 @@ if (isset($_GET['id'])) {
       <div class="inputfield">
         <input type="submit" value= "Update "name="update" class="btn">
       </div>
+
+      <div id = "containerx">
+      <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
+      </div>
       </form>
     </div>
 </div>	
@@ -125,6 +129,36 @@ if (isset($_GET['id'])) {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+
+button{
+  font-size: 15px;
+  padding:7px;
+  border-radius: 4px;
+  margin:5px;
+  color: #009688 ;
+  position: relative;
+  background: #fbfaff;
+  width: 10rem;
+  border: none;
+  outline: none;
+  box-shadow:
+  0 0.7px 4px rgba(0, 0, 0, 0.045),
+  0 1.9px 11.1px rgba(0, 0, 0, 0.065),
+  0 4.5px 26.8px rgba(0, 0, 0, 0.085),
+  0 15px 89px rgba(0, 0, 0, 0.13);
+}
+
+#containerx{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+
 
 *{
   margin: 0;
