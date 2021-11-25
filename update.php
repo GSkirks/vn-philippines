@@ -119,9 +119,9 @@ if (isset($_GET['id'])) {
         <input type="submit" value= "Update "name="update" class="btn">
       </div>
 
-      <div id = "containerx">
+      <!-- <div id = "containerx">
       <button id="btnOne" value="Go back!" onclick="history.back()">Back</button>
-      </div>
+      </div> -->
       </form>
     </div>
 </div>	
