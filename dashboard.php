@@ -25,8 +25,8 @@
 	<div class="body">
 		<nav class="side-bar">
 			<div class="user-p">
-				<img src="admimages/admin.jpg">
-				<h4>Kimpoy</h4>
+				<img src="admimages/oooo.jpg">
+				<h4>Admin 1</h4>
 			</div>
 			<ul>
 				<li>
@@ -48,7 +48,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWQDGJLBjZXJSvxQdCJrzWtJbdbHWcBhbHQpXkSShgwzMNDGwWhJwqtckLDMDqZFkhgZL">
+					<a href="https://mail.google.com/mail/u/4/#inbox">
 						<i class="fa fa-envelope" aria-hidden="true"></i>
 						<span>Email</span>
 					</a>
