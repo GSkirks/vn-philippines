@@ -485,7 +485,7 @@ hr{
         <p>Your Personal Healthcare Companion</p>
         <div class="banner-btn">
             <a href="bmi.php"><span></span>Get Your BMI</a>
-            <a href="subsplans.php"><span></span>Consult Now</a>
+            <a href="zindex.php"><span></span>Consult Now</a>
         </div>
     </div>
 </section>
