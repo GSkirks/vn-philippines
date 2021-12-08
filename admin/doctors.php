@@ -16,7 +16,7 @@
 							<input type="hidden" name="id">
 							<div class="form-group">
 								<label for="" class="control-label">Prefix</label>
-								<input type="text" class="form-control" name="name_pref" placeholder="(M.D.)" required="">
+								<input type="text" class="form-control" name="name_pref" placeholder="(RND)" required="">
 							</div>
 							<div class="form-group">
 								<label class="control-label">Name</label>
