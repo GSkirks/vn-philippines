@@ -500,7 +500,7 @@ hr{
         <li><a href="#service">SERVICES</a></li>
         <li><a href="#testimonial">TESTIMONIALS</a></li>
         <li><a href="#footer">CONNECT WITH US</a></li>
-        <!-- <li><a href="adminlogin.php">ADMINISTRATOR</a></li> -->
+        <li><a href="adminlogin.php">ADMINISTRATOR</a></li>
     </ul>
     </nav>
 </div>

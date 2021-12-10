@@ -14,7 +14,10 @@
 				<a href="https://my.livechatinc.com/chats" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-inbox"></i></span> Messages</a>
 				<a href="https://mail.google.com/mail/u/4/#inbox" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-envelope"></i></span> Email</a>
 				<a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cog"></i></span> Site Settings</a>
+<<<<<<< HEAD
 				
+=======
+>>>>>>> parent of 337d4dd (second try)
 			<?php endif; ?>
 		</div>
 

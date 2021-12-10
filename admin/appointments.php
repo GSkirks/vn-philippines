@@ -21,7 +21,7 @@
 						<tr>
 						<th>Schedule</th>
 						<th>Doctor</th>
-						<th>Patient</th>
+						<th>Pateint</th>
 						<th>Status</th>
 						<th>Action</th>
 					</tr>
