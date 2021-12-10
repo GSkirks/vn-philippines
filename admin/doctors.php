@@ -99,11 +99,11 @@
 										<img src="../assets/img/<?php echo $row['img_path'] ?>" alt="">
 									</td>
 									<td class="">
-										 <p>Name: <b><?php echo "Dr. ".$row['name'].', '.$row['name_pref'] ?></b></p>
+										 <p>Name: <b><?php echo "".$row['name'].', '.$row['name_pref'] ?></b></p>
 										 <p><small>Email: <b><?php echo $row['email'] ?></b></small></p>
 										 <p><small>Clinic Address: <b><?php echo $row['clinic_address'] ?></b></small></p>
 										 <p><small>Contact #: <b><?php echo $row['contact'] ?></b></small></p>
-										 <p><small><a href="javascript:void(0)" class="view_schedule" data-id="<?php echo $row['id'] ?>" data-name="<?php echo "Dr. ".$row['name'].', '.$row['name_pref'] ?>"><i class='fa fa-calendar'></i> Schedule</a></b></small></p>
+										 <p><small><a href="javascript:void(0)" class="view_schedule" data-id="<?php echo $row['id'] ?>" data-name="<?php echo " ".$row['name'].', '.$row['name_pref'] ?>"><i class='fa fa-calendar'></i> Schedule</a></b></small></p>
 
 									</td>
 									<td class="text-center">
