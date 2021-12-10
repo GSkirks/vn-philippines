@@ -47,11 +47,11 @@
 						<img src="assets/img/<?php echo $row['img_path'] ?>" alt="">
 					</div>
 					<div class="col-md-6">
-						 <p>Name: <b><?php echo "Dr. ".$row['name'].', '.$row['name_pref'] ?></b></p>
+						 <p>Name: <b><?php echo " ".$row['name'].', '.$row['name_pref'] ?></b></p>
 						 <p><small>Email: <b><?php echo $row['email'] ?></b></small></p>
 						 <p><small>Clinic Address: <b><?php echo $row['clinic_address'] ?></b></small></p>
 						 <p><small>Contact #: <b><?php echo $row['contact'] ?></b></small></p>
-						 <p><small><a href="javascript:void(0)" class="view_schedule" data-id="<?php echo $row['id'] ?>" data-name="<?php echo "Dr. ".$row['name'].', '.$row['name_pref'] ?>"><i class='fa fa-calendar'></i> Schedule</a></b></small></p>
+						 <p><small><a href="javascript:void(0)" class="view_schedule" data-id="<?php echo $row['id'] ?>" data-name="<?php echo " ".$row['name'].', '.$row['name_pref'] ?>"><i class='fa fa-calendar'></i> Schedule</a></b></small></p>
 						 <!-- <p><b>Specialties:</b></p>
 
 						 <div>
@@ -65,7 +65,7 @@
 						 </div> -->
 					</div>
 					<div class="col-md-3 text-center align-self-end-sm">
-						<button class="btn-outline-primary  btn  mb-4 set_appointment" type="button" data-id="<?php echo $row['id'] ?>"  data-name="<?php echo "Dr. ".$row['name'].', '.$row['name_pref'] ?>">Set Appointment</button>
+						<button class="btn-outline-primary  btn  mb-4 set_appointment" type="button" data-id="<?php echo $row['id'] ?>"  data-name="<?php echo "".$row['name'].', '.$row['name_pref'] ?>">Set Appointment</button>
 					</div>
 				</div>
 				<hr class="divider" style="max-width: 60vw">
