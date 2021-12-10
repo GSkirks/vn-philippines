@@ -11,13 +11,15 @@
 				<a href="index.php?page=categories" class="nav-item nav-categories"><span class='icon-field'><i class="fa fa-book-medical"></i></span> Medical Specialties</a>			
 				<?php if($_SESSION['login_type'] == 1): ?>
 				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Users</a>
-				<a href="https://my.livechatinc.com/chats" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-inbox"></i></span> Messages</a>
-				<a href="https://mail.google.com/mail/u/4/#inbox" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-envelope"></i></span> Email</a>
 				<a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cog"></i></span> Site Settings</a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 				
 =======
 >>>>>>> parent of 337d4dd (second try)
+=======
+				<a href="https://my.livechatinc.com/chats" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cog"></i></span> Messages</a>
+>>>>>>> parent of de1584c (vid2)
 			<?php endif; ?>
 		</div>
 

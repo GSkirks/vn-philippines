@@ -99,7 +99,7 @@
 										<img src="../assets/img/<?php echo $row['img_path'] ?>" alt="">
 									</td>
 									<td class="">
-										 <p>Name: <b><?php echo "".$row['name'].', '.$row['name_pref'] ?></b></p>
+										 <p>Name: <b><?php echo "Dr. ".$row['name'].', '.$row['name_pref'] ?></b></p>
 										 <p><small>Email: <b><?php echo $row['email'] ?></b></small></p>
 										 <p><small>Clinic Address: <b><?php echo $row['clinic_address'] ?></b></small></p>
 										 <p><small>Contact #: <b><?php echo $row['contact'] ?></b></small></p>
