@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $servername = "remotemysql.com";
 $username = "SpqfQoCNvE"; // default username for localhost is root
 $password = "n5Sm4722In"; // default password for localhost is empty
@@ -12,4 +12,4 @@ if ($conn->connect_error) {
 }
 
 
-?> 
+?>  -->
